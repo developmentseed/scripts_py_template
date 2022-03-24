@@ -5,13 +5,11 @@ This is a template to quickly start a python scripting projects in a docker cont
 ## Template
 
 ```sh
-git clone git@github.com:developmentseed/scripts_py_template.git
-export project_name=abc_scripts
-## Rename folders
-mv scripts_py_template ${project_name}
-mv ${project_name}/scripts_py_template ${project_name}/${project_name}
-## Remove .git folder
-cd ${project_name} 
-rm -rf .git
-
+    git clone git@github.com:developmentseed/abc_scripts.git
+    export PROJECT_NAME=kiara
+    ## Rename folders and files
+    mv scripts_py_template ${PROJECT_NAME}
+    ## Remove .git folder
+    cd ${PROJECT_NAME}
+    ./rename.sh
 ```
