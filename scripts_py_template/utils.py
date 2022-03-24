@@ -13,10 +13,10 @@ def read_geojson(input_file):
     Returns:
         list: list fo features
     """
-    fc = []
+    feature_collection = []
     with open(input_file, "r", encoding="utf8") as f:
-        cf = json.load(f)["features"]
-    return cf
+        feature_collection = json.load(f)["features"]
+    return feature_collection
 
 
 def write_geojson(output_file, list_features):

@@ -1,6 +1,7 @@
 import click
 from scripts_py_template.utils import read_geojson, write_geojson
 
+
 @click.command(short_help="Script to get last updates for adapters")
 @click.option(
     "--input_geojson",
