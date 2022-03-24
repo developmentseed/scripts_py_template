@@ -1,0 +1,12 @@
+version: '3'
+services:
+  scripts_py_template:
+    image: developmentseed/scripts_py_template:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+        - ENV=${ENV}
+    volumes:
+        - ./:/mnt
+    working_dir: /mnt
