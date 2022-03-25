@@ -1,3 +1,4 @@
+import os
 from smart_open import open
 import json
 from geojson import FeatureCollection
@@ -44,3 +45,9 @@ def check_geometry(feature: dict):
         return geom_shape.is_valid
     except Exception:
         return False
+
+
+def create_folder(tiles_folder):
+    """Create folder in local in case is needed."""
+    if tiles_folder[:5] not in ["s3://", "gs://"]:
+        os.makedirs(tiles_folder, exist_ok=True)
