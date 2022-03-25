@@ -11,5 +11,5 @@ This is a template to quickly start a python scripting projects in a docker cont
     mv scripts_py_template ${PROJECT_NAME}
     ## Remove .git folder
     cd ${PROJECT_NAME}
-    ./rename.sh
+    ./project.sh
 ```
