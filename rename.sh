@@ -8,4 +8,6 @@ do
         rm $filename-e
     fi
 done
-rm -rf .git
+####################################### Github section
+# rm -rf .git
+# git init

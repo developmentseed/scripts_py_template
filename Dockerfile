@@ -9,3 +9,4 @@ RUN pip install awscli
 COPY . .
 RUN python setup.py install
 RUN python -m unittest
+RUN pip install pre-commit
