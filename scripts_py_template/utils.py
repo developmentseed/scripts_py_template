@@ -4,8 +4,8 @@ from geojson import FeatureCollection
 from shapely.geometry import shape
 
 
-def read_geojson(input_file):
-    """Read a geojson file and return a list of features
+def read_geojson(input_file: str):
+    """Read a geojson file and return a list of features.
 
     Args:
         input_file (str): Location on geojson file
@@ -19,8 +19,8 @@ def read_geojson(input_file):
     return feature_collection
 
 
-def write_geojson(output_file, list_features):
-    """Write geojson files
+def write_geojson(output_file: str, list_features: list):
+    """Write geojson files.
 
     Args:
         output_file (str): Location of ouput file
@@ -30,11 +30,11 @@ def write_geojson(output_file, list_features):
         json.dump(FeatureCollection(list_features), f)
 
 
-def check_geometry(feature):
-    """Verify if geometry is valid
+def check_geometry(feature: dict):
+    """Verify if geometry is valid.
 
     Args:
-        feat (obj): Feature
+        feat (dict): Feature
 
     Returns:
         Bool: Return false or true acoording to the geometry
