@@ -9,11 +9,12 @@ git clone https://github.com/developmentseed/scripts_py_template.git ${PROJECT_N
 ######################################################
 ## Rename files
 ######################################################
-
+cd ${PROJECT_NAME}/
+mv scripts_py_template ${PROJECT_NAME}
 for filename in ./* ./*/*; do
     if [ -f "$filename" ]; then
         echo $filename
-        sed -i -e 's/kiara2/'${PROJECT_NAME}'/g' $filename
+        sed -i -e 's/scripts_py_template/'${PROJECT_NAME}'/g' $filename
         rm $filename-e
     fi
 done
