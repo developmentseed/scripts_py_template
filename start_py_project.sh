@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#This a script to start a simple Python scripts project with docker eviroment.
 PROJECT_NAME=$1
 ######################################################
 ## Clone project
@@ -25,7 +26,23 @@ done
 echo ${PROJECT_NAME} >README.md
 
 ######################################################
+## Remove unnecessary files
+######################################################
+rm start_py_project.sh
+
+######################################################
+## Build Docker
+######################################################
+docker-compose build
+
+######################################################
 ## Github section and linters
 ######################################################
 rm -rf .git
 git init
+
+######################################################
+## Github section and linters
+######################################################
+pre-commit install
+pre-commit run --all-files
