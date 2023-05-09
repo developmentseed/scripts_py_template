@@ -1,7 +1,7 @@
 requests==2.25.1
 joblib==1.0.1
 tqdm==4.61.1
-click==7.1.2
+click==8.1.3
 smart-open==5.2.1
 smart_open[s3]
 geojson==2.5.0

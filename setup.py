@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
-from imp import load_source
+import importlib.util
 from os import path as op
 import io
 
-__version__ = load_source("version", "version.py").__version__
-
+spec = importlib.util.spec_from_file_location("version", "version.py")
+version = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(version)
+__version__ = version.__version__
 here = op.abspath(op.dirname(__file__))
 with open(op.join(here, "README.md")) as fp:
     long_description = fp.read()
