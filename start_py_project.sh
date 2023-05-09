@@ -11,6 +11,7 @@ git clone https://github.com/developmentseed/scripts_py_template.git ${PROJECT_N
 ## Rename files
 ######################################################
 cd ${PROJECT_NAME}/
+git checkout module
 mv scripts_py_template ${PROJECT_NAME}
 for filename in ./* ./*/*; do
     if [ -f "$filename" ]; then
